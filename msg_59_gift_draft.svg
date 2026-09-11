@@ -1,0 +1,89 @@
+<svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f3d9d2"/>
+      <stop offset="1" stop-color="#e9c7bd"/>
+    </linearGradient>
+
+    <linearGradient id="boxGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#d64550"/>
+      <stop offset="0.55" stop-color="#a3273a"/>
+      <stop offset="1" stop-color="#701c29"/>
+    </linearGradient>
+
+    <linearGradient id="ribbonVert" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#6f5320"/>
+      <stop offset="0.18" stop-color="#f3d78a"/>
+      <stop offset="0.5" stop-color="#c8973f"/>
+      <stop offset="0.82" stop-color="#f3d78a"/>
+      <stop offset="1" stop-color="#6f5320"/>
+    </linearGradient>
+
+    <linearGradient id="ribbonHoriz" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#6f5320"/>
+      <stop offset="0.18" stop-color="#f3d78a"/>
+      <stop offset="0.5" stop-color="#c8973f"/>
+      <stop offset="0.82" stop-color="#f3d78a"/>
+      <stop offset="1" stop-color="#6f5320"/>
+    </linearGradient>
+
+    <radialGradient id="loopShine" cx="35%" cy="28%" r="75%">
+      <stop offset="0" stop-color="#fbe8b0"/>
+      <stop offset="0.5" stop-color="#e0ac48"/>
+      <stop offset="1" stop-color="#8a641f"/>
+    </radialGradient>
+
+    <filter id="softShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#5e1b26" flood-opacity="0.35"/>
+    </filter>
+
+    <filter id="bowShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#3a2a10" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <rect width="400" height="400" fill="url(#bg)"/>
+
+  <!-- box -->
+  <g filter="url(#softShadow)">
+    <rect x="45" y="45" width="310" height="310" rx="14" fill="url(#boxGrad)"/>
+  </g>
+  <!-- top-left soft highlight -->
+  <rect x="45" y="45" width="310" height="310" rx="14" fill="white" opacity="0.04"/>
+  <ellipse cx="120" cy="90" rx="120" ry="50" fill="white" opacity="0.06"/>
+
+  <!-- vertical ribbon -->
+  <rect x="172" y="25" width="56" height="350" fill="url(#ribbonVert)"/>
+  <rect x="197" y="25" width="6" height="350" fill="#5c421a" opacity="0.4"/>
+
+  <!-- horizontal ribbon -->
+  <rect x="25" y="172" width="350" height="56" fill="url(#ribbonHoriz)"/>
+  <rect x="25" y="197" width="350" height="6" fill="#5c421a" opacity="0.4"/>
+
+  <!-- bow -->
+  <g filter="url(#bowShadow)" transform="translate(200,200)">
+    <!-- tails -->
+    <path d="M -20,14 L -46,105 L -22,88 L -4,105 L -10,16 Z" fill="url(#ribbonVert)" stroke="#5c421a" stroke-width="1.5"/>
+    <path d="M 20,14 L 46,105 L 22,88 L 4,105 L 10,16 Z" fill="url(#ribbonVert)" stroke="#5c421a" stroke-width="1.5"/>
+
+    <!-- left loop -->
+    <path d="M0,-4
+             C -20,-55 -75,-70 -95,-35
+             C -112,-4 -85,28 -45,22
+             C -20,18 -6,6 0,-4 Z"
+          fill="url(#loopShine)" stroke="#5c421a" stroke-width="2"/>
+    <!-- left loop inner fold -->
+    <path d="M0,-4 C -22,-40 -55,-46 -70,-24" fill="none" stroke="#5c421a" stroke-width="2" opacity="0.5"/>
+
+    <!-- right loop (mirrored) -->
+    <path d="M0,-4
+             C 20,-55 75,-70 95,-35
+             C 112,-4 85,28 45,22
+             C 20,18 6,6 0,-4 Z"
+          fill="url(#loopShine)" stroke="#5c421a" stroke-width="2"/>
+    <path d="M0,-4 C 22,-40 55,-46 70,-24" fill="none" stroke="#5c421a" stroke-width="2" opacity="0.5"/>
+
+    <!-- knot -->
+    <rect x="-17" y="-18" width="34" height="38" rx="6" fill="url(#ribbonHoriz)" stroke="#5c421a" stroke-width="1.5"/>
+  </g>
+</svg>

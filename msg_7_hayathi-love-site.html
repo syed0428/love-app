@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Hayathi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#FBF7F1;
+    --paper-deep:#F3EAE1;
+    --ink:#2B1620;
+    --wine:#7A2E3B;
+    --wine-deep:#551E28;
+    --gold:#B08947;
+    --blush:#E9CFC2;
+    --line: rgba(43,22,32,0.14);
+  }
+
+  *{box-sizing:border-box; margin:0; padding:0;}
+
+  html{scroll-behavior:smooth;}
+
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Jost', sans-serif;
+    font-weight:300;
+    line-height:1.6;
+    overflow-x:hidden;
+  }
+
+  h1,h2,h3, .display{
+    font-family:'Playfair Display', serif;
+    font-weight:600;
+    color:var(--wine-deep);
+    letter-spacing:0.01em;
+  }
+
+  .container{
+    max-width:1040px;
+    margin:0 auto;
+    padding:0 32px;
+  }
+
+  a{color:inherit;}
+
+  /* ---------- texture ---------- */
+  .grain{
+    position:fixed; inset:0; pointer-events:none; z-index:5;
+    opacity:0.035; mix-blend-mode:multiply;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  /* ---------- hero ---------- */
+  .hero{
+    min-height:100svh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    position:relative;
+    padding:60px 32px;
+    background:
+      radial-gradient(ellipse 60% 50% at 50% 0%, var(--blush) 0%, transparent 60%),
+      var(--paper);
+  }
+
+  .hero-eyebrow{
+    font-family:'Playfair Display', serif;
+    font-style:italic;
+    font-weight:500;
+    font-size:1.15rem;
+    color:var(--wine);
+    margin-bottom:18px;
+    opacity:0;
+    animation:riseIn 1s ease 0.2s forwards;
+  }
+
+  .hero h1{
+    font-size:clamp(3.2rem, 9vw, 6.5rem);
+    line-height:1.02;
+    opacity:0;
+    animation:riseIn 1.1s ease 0.5s forwards;
+  }
+
+  .hero-sub{
+    max-width:520px;
+    margin:26px auto 0;
+    font-size:1.05rem;
+    color:#5b3d44;
+    opacity:0;
+    animation:riseIn 1s ease 0.9s forwards;
+  }
+
+  .hero-scroll{
+    margin-top:64px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:10px;
+    font-size:0.78rem;
+    color:var(--wine);
+    opacity:0;
+    animation:riseIn 1s ease 1.3s forwards;
+  }
+
+  .hero-scroll .stem{
+    width:1px; height:46px;
+    background:linear-gradient(var(--wine), transparent);
+    animation:stemGrow 1.8s ease 1.6s forwards;
+    transform-origin:top;
+    transform:scaleY(0);
+  }
+
+  @keyframes riseIn{
+    from{opacity:0; transform:translateY(16px);}
+    to{opacity:1; transform:translateY(0);}
+  }
+  @keyframes stemGrow{
+    to{transform:scaleY(1);}
+  }
+
+  /* ---------- section shell ---------- */
+  section{
+    padding:120px 0;
+    position:relative;
+  }
+
+  .section-head{
+    text-align:center;
+    margin-bottom:76px;
+  }
+
+  .section-head .kicker{
+    font-family:'Playfair Display', serif;
+    font-style:italic;
+    color:var(--wine);
+    font-size:1.05rem;
+    margin-bottom:10px;
+  }
+
+  .section-head h2{
+    font-size:clamp(2.1rem, 4.5vw, 3rem);
+  }
+
+  /* ---------- timeline ---------- */
+  .timeline{
+    position:relative;
+    padding-left:0;
+  }
+
+  .timeline::before{
+    content:'';
+    position:absolute;
+    left:50%;
+    top:0; bottom:0;
+    width:1px;
+    background:var(--line);
+    transform:translateX(-50%);
+  }
+
+  .t-item{
+    display:grid;
+    grid-template-columns:1fr 60px 1fr;
+    align-items:start;
+    margin-bottom:70px;
+  }
+
+  .t-item:last-child{margin-bottom:0;}
+
+  .t-card{
+    background:var(--paper-deep);
+    border:1px solid var(--line);
+    padding:30px 34px;
+    border-radius:2px;
+  }
+
+  .t-item:nth-child(odd) .t-card{grid-column:1;}
+  .t-item:nth-child(odd) .t-spacer{grid-column:3;}
+  .t-item:nth-child(even) .t-card{grid-column:3;}
+  .t-item:nth-child(even) .t-spacer{grid-column:1;}
+
+  .t-dot{
+    grid-column:2;
+    width:11px; height:11px;
+    background:var(--wine);
+    border-radius:50%;
+    margin:8px auto 0;
+    position:relative;
+  }
+  .t-dot::after{
+    content:'';
+    position:absolute;
+    inset:-6px;
+    border:1px solid var(--wine);
+    border-radius:50%;
+    opacity:0.35;
+  }
+
+  .t-date{
+    font-family:'Playfair Display', serif;
+    font-style:italic;
+    color:var(--gold);
+    font-size:0.95rem;
+    margin-bottom:8px;
+    display:block;
+  }
+
+  .t-card h3{
+    font-size:1.3rem;
+    margin-bottom:10px;
+  }
+
+  .t-card p{
+    font-size:0.96rem;
+    color:#54383f;
+  }
+
+  @media (max-width:720px){
+    .timeline::before{left:20px;}
+    .t-item{grid-template-columns:44px 1fr; column-gap:16px;}
+    .t-dot{grid-column:1; margin:8px 0 0 auto;}
+    .t-item:nth-child(odd) .t-card,
+    .t-item:nth-child(even) .t-card{grid-column:2;}
+    .t-spacer{display:none;}
+  }
+
+  /* ---------- gallery ---------- */
+  .gallery{
+    background:var(--wine-deep);
+    color:var(--paper);
+  }
+  .gallery .section-head h2, .gallery .kicker{color:var(--paper);}
+  .gallery .kicker{color:var(--blush);}
+
+  .gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:18px;
+  }
+
+  .frame{
+    aspect-ratio:4/5;
+    background:
+      linear-gradient(160deg, rgba(255,255,255,0.06), rgba(255,255,255,0.01));
+    border:1px solid rgba(251,247,241,0.22);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:20px;
+    font-family:'Playfair Display', serif;
+    font-style:italic;
+    color:rgba(251,247,241,0.55);
+    font-size:0.95rem;
+    position:relative;
+    overflow:hidden;
+  }
+
+  .frame img{
+    width:100%; height:100%; object-fit:cover;
+    position:absolute; inset:0;
+  }
+
+  .frame:nth-child(2){aspect-ratio:4/6; margin-top:30px;}
+  .frame:nth-child(5){aspect-ratio:4/6; margin-top:-30px;}
+
+  @media (max-width:720px){
+    .gallery-grid{grid-template-columns:repeat(2,1fr);}
+    .frame:nth-child(2), .frame:nth-child(5){margin-top:0;}
+  }
+
+  /* ---------- envelopes / love notes ---------- */
+  .notes-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:26px;
+  }
+
+  @media (max-width:720px){
+    .notes-grid{grid-template-columns:1fr;}
+  }
+
+  .envelope{
+    background:var(--paper-deep);
+    border:1px solid var(--line);
+    padding:0;
+    cursor:pointer;
+    position:relative;
+    min-height:190px;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+    overflow:hidden;
+    transition:border-color 0.3s ease;
+  }
+
+  .envelope:hover{border-color:var(--gold);}
+
+  .envelope .flap{
+    position:absolute;
+    top:0; left:0; right:0;
+    height:0;
+    border-left:105px solid transparent;
+    border-right:105px solid transparent;
+    border-top:78px solid var(--wine);
+    opacity:0.9;
+    transition:transform 0.45s cubic-bezier(.6,0,.4,1), opacity 0.3s ease;
+    transform-origin:top;
+  }
+
+  .envelope.open .flap{
+    transform:rotateX(180deg);
+    opacity:0;
+  }
+
+  .envelope-label{
+    padding:24px 26px;
+    font-family:'Playfair Display', serif;
+    font-style:italic;
+    color:var(--wine);
+    font-size:1.05rem;
+    text-align:center;
+    transition:opacity 0.25s ease;
+  }
+
+  .envelope.open .envelope-label{display:none;}
+
+  .envelope-message{
+    display:none;
+    padding:28px 26px 30px;
+    font-size:0.95rem;
+    color:#4a2f36;
+    animation:fadeMsg 0.5s ease forwards;
+  }
+
+  .envelope.open .envelope-message{display:block;}
+
+  @keyframes fadeMsg{
+    from{opacity:0; transform:translateY(6px);}
+    to{opacity:1; transform:translateY(0);}
+  }
+
+  .envelope-hint{
+    font-size:0.72rem;
+    letter-spacing:0.04em;
+    color:#9a7480;
+    padding:0 26px 18px;
+  }
+
+  /* ---------- closing ---------- */
+  .closing{
+    text-align:center;
+    padding:150px 32px 130px;
+    background:
+      radial-gradient(ellipse 60% 60% at 50% 100%, var(--blush) 0%, transparent 65%),
+      var(--paper);
+  }
+
+  .closing h2{
+    font-size:clamp(2.3rem, 6vw, 4rem);
+    max-width:680px;
+    margin:0 auto 28px;
+    line-height:1.15;
+  }
+
+  .closing p{
+    max-width:480px;
+    margin:0 auto;
+    color:#5b3d44;
+    font-size:1.02rem;
+  }
+
+  .signature{
+    margin-top:46px;
+    font-family:'Playfair Display', serif;
+    font-style:italic;
+    font-size:1.6rem;
+    color:var(--wine);
+  }
+
+  .divider{
+    width:56px; height:1px;
+    background:var(--gold);
+    margin:36px auto;
+  }
+
+  footer{
+    text-align:center;
+    padding:36px;
+    font-size:0.78rem;
+    color:#9a7480;
+  }
+</style>
+</head>
+<body>
+
+<div class="grain"></div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-eyebrow">A small letter, for a big day</div>
+  <h1>Happy Birthday,<br>Hayathi</h1>
+  <p class="hero-sub">Thirteen years of September has never looked the same since you arrived in it. This little page is just for you — a place to keep a few of my favourite things about us.</p>
+  <div class="hero-scroll">
+    <span>scroll down</span>
+    <span class="stem"></span>
+  </div>
+</section>
+
+<!-- OUR STORY -->
+<section id="story">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">chapter one</div>
+      <h2>Our story so far</h2>
+    </div>
+
+    <div class="timeline">
+      <div class="t-item">
+        <div class="t-card">
+          <span class="t-date">Where it started</span>
+          <h3>The first time we spoke</h3>
+          <p>Replace this with how you two actually met — the place, the small detail you still remember, the thing she said that stuck with you.</p>
+        </div>
+        <div class="t-dot"></div>
+        <div class="t-spacer"></div>
+      </div>
+
+      <div class="t-item">
+        <div class="t-spacer"></div>
+        <div class="t-dot"></div>
+        <div class="t-card">
+          <span class="t-date">A day that mattered</span>
+          <h3>The moment I knew</h3>
+          <p>A trip, a quiet evening, a hard time she stood by you through — whatever the memory is, this is the spot for it.</p>
+        </div>
+      </div>
+
+      <div class="t-item">
+        <div class="t-card">
+          <span class="t-date">Today</span>
+          <h3>Right now, with you</h3>
+          <p>Something about your life together as it is now — an inside joke, a routine you love, a plan you're building toward.</p>
+        </div>
+        <div class="t-dot"></div>
+        <div class="t-spacer"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery" id="gallery">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">chapter two</div>
+      <h2>A few frames of us</h2>
+    </div>
+    <div class="gallery-grid">
+      <div class="frame">your favourite photo of us</div>
+      <div class="frame">a trip you both loved</div>
+      <div class="frame">her, mid-laugh</div>
+      <div class="frame">a quiet ordinary day</div>
+      <div class="frame">the two of you, together</div>
+      <div class="frame">one more, just because</div>
+    </div>
+  </div>
+</section>
+
+<!-- LOVE NOTES -->
+<section id="notes">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">chapter three</div>
+      <h2>Open when you want to smile</h2>
+    </div>
+    <div class="notes-grid">
+      <div class="envelope" onclick="this.classList.toggle('open')">
+        <div class="flap"></div>
+        <div class="envelope-label">why I love you</div>
+        <div class="envelope-message">Write three or four honest, specific lines here — not generic compliments, but things only you would know about her.</div>
+        <div class="envelope-hint">tap to open</div>
+      </div>
+      <div class="envelope" onclick="this.classList.toggle('open')">
+        <div class="flap"></div>
+        <div class="envelope-label">my favourite memory</div>
+        <div class="envelope-message">Describe one specific memory in detail — where you were, what she was wearing, what made it stick with you.</div>
+        <div class="envelope-hint">tap to open</div>
+      </div>
+      <div class="envelope" onclick="this.classList.toggle('open')">
+        <div class="flap"></div>
+        <div class="envelope-label">a promise for this year</div>
+        <div class="envelope-message">Something you want to do together, or a small promise for the year ahead — a trip, a habit, a change.</div>
+        <div class="envelope-hint">tap to open</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CLOSING -->
+<section class="closing">
+  <div class="kicker" style="font-family:'Playfair Display',serif;font-style:italic;color:var(--wine);margin-bottom:14px;">last page</div>
+  <h2>Happy birthday, my love. Here's to another year of us.</h2>
+  <p>Write one closing line here — the thing you most want her to feel when she reaches the end of this page.</p>
+  <div class="divider"></div>
+  <div class="signature">— yours, always</div>
+</section>
+
+<footer>made with love, September 13</footer>
+
+</body>
+</html>
