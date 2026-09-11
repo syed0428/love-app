@@ -2620,37 +2620,14 @@
           <!-- Frame 1: Your favourite photo of us -->
           <div class="photo-frame" id="photoFrame1">
             <div class="frame-inner" id="frameInner1">
-              <input type="file" id="photoInput1" class="photo-file-input" accept="image/*" style="display:none" onchange="handlePhotoUpload(1, this)">
-              <img id="galleryImg1" src="image/photo1.jpg" alt="Your favourite photo of us" class="frame-photo" style="display:none" onerror="this.style.display='none'">
-              
+              <img id="galleryImg1" src="image/photo1.jpg" alt="Your favourite photo of us" class="frame-photo" onerror="this.style.display='none'">
               <div class="placeholder-card" id="placeholder1">
                 <svg class="memory-heart-icon" viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
                 </svg>
                 <div class="polaroid-title">First Steps</div>
                 <div class="polaroid-sub">your smile that lights up my universe</div>
-                <button type="button" class="btn-add-photo clickable" onclick="triggerPhotoUpload(1)">
-                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
-                    <circle cx="12" cy="13" r="4"></circle>
-                  </svg>
-                  <span>add a memory...</span>
-                </button>
               </div>
-
-              <div class="frame-loader" id="frameLoader1">
-                <div class="loader-spinner"></div>
-                <span>Adding to our wall... ✨</span>
-              </div>
-              <div class="frame-error-badge" id="frameError1"></div>
-
-              <button type="button" class="btn-change-photo clickable" id="btnChange1" style="display:none" onclick="triggerPhotoUpload(1)">
-                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
-                  <circle cx="12" cy="13" r="4"></circle>
-                </svg>
-                <span>change</span>
-              </button>
             </div>
             <div class="frame-caption">~ your favourite photo of us ~</div>
           </div>
@@ -2658,37 +2635,14 @@
           <!-- Frame 2: A trip you both loved -->
           <div class="photo-frame" id="photoFrame2">
             <div class="frame-inner" id="frameInner2">
-              <input type="file" id="photoInput2" class="photo-file-input" accept="image/*" style="display:none" onchange="handlePhotoUpload(2, this)">
-              <img id="galleryImg2" src="image/photo2.jpg" alt="A trip you both loved" class="frame-photo" style="display:none" onerror="this.style.display='none'">
-              
+              <img id="galleryImg2" src="image/photo2.jpg" alt="A trip you both loved" class="frame-photo" onerror="this.style.display='none'">
               <div class="placeholder-card" id="placeholder2">
                 <svg class="memory-heart-icon" viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
                 </svg>
                 <div class="polaroid-title">Blessed Journey</div>
                 <div class="polaroid-sub">Umrah together before the Kaaba</div>
-                <button type="button" class="btn-add-photo clickable" onclick="triggerPhotoUpload(2)">
-                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
-                    <circle cx="12" cy="13" r="4"></circle>
-                  </svg>
-                  <span>add a memory...</span>
-                </button>
               </div>
-
-              <div class="frame-loader" id="frameLoader2">
-                <div class="loader-spinner"></div>
-                <span>Adding to our wall... ✨</span>
-              </div>
-              <div class="frame-error-badge" id="frameError2"></div>
-
-              <button type="button" class="btn-change-photo clickable" id="btnChange2" style="display:none" onclick="triggerPhotoUpload(2)">
-                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
-                  <circle cx="12" cy="13" r="4"></circle>
-                </svg>
-                <span>change</span>
-              </button>
             </div>
             <div class="frame-caption">~ a trip you both loved ~</div>
           </div>
@@ -2696,37 +2650,14 @@
           <!-- Frame 3: Her, mid-laugh -->
           <div class="photo-frame" id="photoFrame3">
             <div class="frame-inner" id="frameInner3">
-              <input type="file" id="photoInput3" class="photo-file-input" accept="image/*" style="display:none" onchange="handlePhotoUpload(3, this)">
-              <img id="galleryImg3" src="image/photo3.jpg" alt="Her, mid-laugh" class="frame-photo" style="display:none" onerror="this.style.display='none'">
-              
+              <img id="galleryImg3" src="image/photo3.jpg" alt="Her, mid-laugh" class="frame-photo" onerror="this.style.display='none'">
               <div class="placeholder-card" id="placeholder3">
                 <svg class="memory-heart-icon" viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
                 </svg>
                 <div class="polaroid-title">Her, Mid-Laugh</div>
                 <div class="polaroid-sub">Kutty Shafeen teasing moment</div>
-                <button type="button" class="btn-add-photo clickable" onclick="triggerPhotoUpload(3)">
-                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
-                    <circle cx="12" cy="13" r="4"></circle>
-                  </svg>
-                  <span>add a memory...</span>
-                </button>
               </div>
-
-              <div class="frame-loader" id="frameLoader3">
-                <div class="loader-spinner"></div>
-                <span>Adding to our wall... ✨</span>
-              </div>
-              <div class="frame-error-badge" id="frameError3"></div>
-
-              <button type="button" class="btn-change-photo clickable" id="btnChange3" style="display:none" onclick="triggerPhotoUpload(3)">
-                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
-                  <circle cx="12" cy="13" r="4"></circle>
-                </svg>
-                <span>change</span>
-              </button>
             </div>
             <div class="frame-caption">~ her, mid-laugh ~</div>
           </div>
@@ -2734,37 +2665,14 @@
           <!-- Frame 4: A quiet ordinary day -->
           <div class="photo-frame" id="photoFrame4">
             <div class="frame-inner" id="frameInner4">
-              <input type="file" id="photoInput4" class="photo-file-input" accept="image/*" style="display:none" onchange="handlePhotoUpload(4, this)">
-              <img id="galleryImg4" src="image/photo4.jpg" alt="A quiet ordinary day" class="frame-photo" style="display:none" onerror="this.style.display='none'">
-              
+              <img id="galleryImg4" src="image/photo4.jpg" alt="A quiet ordinary day" class="frame-photo" onerror="this.style.display='none'">
               <div class="placeholder-card" id="placeholder4">
                 <svg class="memory-heart-icon" viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
                 </svg>
                 <div class="polaroid-title">A Quiet Ordinary Day</div>
                 <div class="polaroid-sub">where I find stillness and rest</div>
-                <button type="button" class="btn-add-photo clickable" onclick="triggerPhotoUpload(4)">
-                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
-                    <circle cx="12" cy="13" r="4"></circle>
-                  </svg>
-                  <span>add a memory...</span>
-                </button>
               </div>
-
-              <div class="frame-loader" id="frameLoader4">
-                <div class="loader-spinner"></div>
-                <span>Adding to our wall... ✨</span>
-              </div>
-              <div class="frame-error-badge" id="frameError4"></div>
-
-              <button type="button" class="btn-change-photo clickable" id="btnChange4" style="display:none" onclick="triggerPhotoUpload(4)">
-                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
-                  <circle cx="12" cy="13" r="4"></circle>
-                </svg>
-                <span>change</span>
-              </button>
             </div>
             <div class="frame-caption">~ a quiet ordinary day ~</div>
           </div>
@@ -2772,37 +2680,14 @@
           <!-- Frame 5: The two of you, together -->
           <div class="photo-frame" id="photoFrame5">
             <div class="frame-inner" id="frameInner5">
-              <input type="file" id="photoInput5" class="photo-file-input" accept="image/*" style="display:none" onchange="handlePhotoUpload(5, this)">
-              <img id="galleryImg5" src="image/photo5.jpg" alt="The two of you, together" class="frame-photo" style="display:none" onerror="this.style.display='none'">
-              
+              <img id="galleryImg5" src="image/photo5.jpg" alt="The two of you, together" class="frame-photo" onerror="this.style.display='none'">
               <div class="placeholder-card" id="placeholder5">
                 <svg class="memory-heart-icon" viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
                 </svg>
                 <div class="polaroid-title">Side By Side</div>
                 <div class="polaroid-sub">the two of us, together always</div>
-                <button type="button" class="btn-add-photo clickable" onclick="triggerPhotoUpload(5)">
-                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
-                    <circle cx="12" cy="13" r="4"></circle>
-                  </svg>
-                  <span>add a memory...</span>
-                </button>
               </div>
-
-              <div class="frame-loader" id="frameLoader5">
-                <div class="loader-spinner"></div>
-                <span>Adding to our wall... ✨</span>
-              </div>
-              <div class="frame-error-badge" id="frameError5"></div>
-
-              <button type="button" class="btn-change-photo clickable" id="btnChange5" style="display:none" onclick="triggerPhotoUpload(5)">
-                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
-                  <circle cx="12" cy="13" r="4"></circle>
-                </svg>
-                <span>change</span>
-              </button>
             </div>
             <div class="frame-caption">~ the two of you, together ~</div>
           </div>
@@ -2810,44 +2695,21 @@
           <!-- Frame 6: One more, just because -->
           <div class="photo-frame" id="photoFrame6">
             <div class="frame-inner" id="frameInner6">
-              <input type="file" id="photoInput6" class="photo-file-input" accept="image/*" style="display:none" onchange="handlePhotoUpload(6, this)">
-              <img id="galleryImg6" src="image/photo6.jpg" alt="One more, just because" class="frame-photo" style="display:none" onerror="this.style.display='none'">
-              
+              <img id="galleryImg6" src="image/photo6.jpg" alt="One more, just because" class="frame-photo" onerror="this.style.display='none'">
               <div class="placeholder-card" id="placeholder6">
                 <svg class="memory-heart-icon" viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
                 </svg>
                 <div class="polaroid-title">Forever Ahead</div>
                 <div class="polaroid-sub">Bangalore to Madurai, one heart</div>
-                <button type="button" class="btn-add-photo clickable" onclick="triggerPhotoUpload(6)">
-                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
-                    <circle cx="12" cy="13" r="4"></circle>
-                  </svg>
-                  <span>add a memory...</span>
-                </button>
               </div>
-
-              <div class="frame-loader" id="frameLoader6">
-                <div class="loader-spinner"></div>
-                <span>Adding to our wall... ✨</span>
-              </div>
-              <div class="frame-error-badge" id="frameError6"></div>
-
-              <button type="button" class="btn-change-photo clickable" id="btnChange6" style="display:none" onclick="triggerPhotoUpload(6)">
-                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
-                  <circle cx="12" cy="13" r="4"></circle>
-                </svg>
-                <span>change</span>
-              </button>
             </div>
             <div class="frame-caption">~ one more, just because ~</div>
           </div>
         </div>
       </div>
-          </div>
-      <div class="page-curl-shadow"></div>
+    </div>
+    <div class="page-curl-shadow"></div>
       <div class="page-under-shadow"></div>
     </section>
 
@@ -3544,226 +3406,64 @@
 
     // ---------- ENVELOPES INTERACTION ----------
     // ============================================================================
-    // CHAPTER 2: IN-BROWSER PHOTO UPLOAD & INDEXEDDB / LOCALSTORAGE PERSISTENCE
+    // CHAPTER 3: STATIC PHOTO MEMORY WALL & STORAGE PURGE
     // ============================================================================
-    const GALLERY_DB_NAME = "HayathiLoveGalleryDB";
-    const GALLERY_DB_VERSION = 1;
-    const GALLERY_STORE_NAME = "photos";
-
-    function openGalleryDB() {
-      return new Promise((resolve) => {
-        if (!window.indexedDB) {
-          resolve(null);
-          return;
-        }
-        try {
-          const req = window.indexedDB.open(GALLERY_DB_NAME, GALLERY_DB_VERSION);
-          req.onupgradeneeded = (e) => {
-            const db = e.target.result;
-            if (!db.objectStoreNames.contains(GALLERY_STORE_NAME)) {
-              db.createObjectStore(GALLERY_STORE_NAME);
-            }
-          };
-          req.onsuccess = (e) => resolve(e.target.result);
-          req.onerror = () => resolve(null);
-        } catch (err) {
-          resolve(null);
-        }
-      });
-    }
-
-    async function saveGalleryPhoto(frameId, dataUrl) {
+    // Purge any legacy cached photos from localStorage and IndexedDB so they never override static images
+    (function purgeLegacyGalleryStorage() {
       try {
-        const db = await openGalleryDB();
-        if (db) {
-          return new Promise((resolve) => {
-            const tx = db.transaction(GALLERY_STORE_NAME, "readwrite");
-            tx.objectStore(GALLERY_STORE_NAME).put(dataUrl, frameId);
-            tx.oncomplete = () => {
-              db.close();
-              resolve(true);
-            };
-            tx.onerror = () => {
-              db.close();
-              fallbackSaveLS(frameId, dataUrl);
-              resolve(true);
-            };
-          });
-        } else {
-          fallbackSaveLS(frameId, dataUrl);
+        for (let i = 1; i <= 6; i++) {
+          localStorage.removeItem("hayathi_gallery_" + i);
         }
-      } catch (err) {
-        fallbackSaveLS(frameId, dataUrl);
-      }
-    }
-
-    function fallbackSaveLS(frameId, dataUrl) {
-      try {
-        localStorage.setItem("hayathi_gallery_" + frameId, dataUrl);
-      } catch (err) {
-        console.warn("Storage quota exceeded", err);
-      }
-    }
-
-    async function getGalleryPhoto(frameId) {
-      try {
-        const db = await openGalleryDB();
-        if (db) {
-          return new Promise((resolve) => {
-            const tx = db.transaction(GALLERY_STORE_NAME, "readonly");
-            const req = tx.objectStore(GALLERY_STORE_NAME).get(frameId);
-            req.onsuccess = (e) => {
-              db.close();
-              const val = e.target.result;
-              if (val) resolve(val);
-              else resolve(fallbackGetLS(frameId));
-            };
-            req.onerror = () => {
-              db.close();
-              resolve(fallbackGetLS(frameId));
-            };
-          });
+        if (window.indexedDB && window.indexedDB.deleteDatabase) {
+          window.indexedDB.deleteDatabase("HayathiLoveGalleryDB");
         }
-      } catch (err) {}
-      return fallbackGetLS(frameId);
-    }
-
-    function fallbackGetLS(frameId) {
-      try {
-        return localStorage.getItem("hayathi_gallery_" + frameId);
-      } catch (err) {
-        return null;
+      } catch (e) {
+        console.warn("Storage purge:", e);
       }
-    }
+    })();
 
-    function triggerPhotoUpload(frameId) {
-      const input = document.getElementById("photoInput" + frameId);
-      if (input) {
-        input.value = "";
-        input.click();
-      }
-    }
-
-    function handlePhotoUpload(frameId, input) {
-      const file = input.files && input.files[0];
-      if (!file) return;
-
-      const loader = document.getElementById("frameLoader" + frameId);
-
-      if (!file.type.startsWith("image/")) {
-        showFrameError(frameId, "Please select an image file (JPG, PNG, WebP) ✨");
-        return;
-      }
-
-      if (loader) loader.style.display = "flex";
-
-      const reader = new FileReader();
-      reader.onerror = () => {
-        if (loader) loader.style.display = "none";
-        showFrameError(frameId, "Unable to read image. Please try another! ✨");
-      };
-
-      reader.onload = (e) => {
-        const rawDataUrl = e.target.result;
-        const img = new Image();
-        img.onerror = () => {
-          if (loader) loader.style.display = "none";
-          showFrameError(frameId, "Image format error. Please try another! ✨");
-        };
-
-        img.onload = async () => {
-          try {
-            // Downsample gracefully to max 1440px to ensure fast loads & smooth performance
-            const MAX_DIM = 1440;
-            let w = img.width;
-            let h = img.height;
-            if (w > MAX_DIM || h > MAX_DIM) {
-              if (w > h) {
-                h = Math.round((h * MAX_DIM) / w);
-                w = MAX_DIM;
-              } else {
-                w = Math.round((w * MAX_DIM) / h);
-                h = MAX_DIM;
-              }
-            }
-            const canvas = document.createElement("canvas");
-            canvas.width = w;
-            canvas.height = h;
-            const ctx = canvas.getContext("2d");
-            ctx.drawImage(img, 0, 0, w, h);
-            const optimizedDataUrl = canvas.toDataURL("image/jpeg", 0.90);
-
-            await saveGalleryPhoto(frameId, optimizedDataUrl);
-            displayPhotoInFrame(frameId, optimizedDataUrl);
-          } catch (err) {
-            await saveGalleryPhoto(frameId, rawDataUrl);
-            displayPhotoInFrame(frameId, rawDataUrl);
-          } finally {
-            if (loader) loader.style.display = "none";
-          }
-        };
-        img.src = rawDataUrl;
-      };
-
-      reader.readAsDataURL(file);
-    }
-
-    function displayPhotoInFrame(frameId, dataUrl) {
-      const imgEl = document.getElementById("galleryImg" + frameId);
-      const placeholderEl = document.getElementById("placeholder" + frameId);
-      const changeBtn = document.getElementById("btnChange" + frameId);
-      const frameEl = document.getElementById("photoFrame" + frameId);
-
-      if (imgEl) {
-        imgEl.src = dataUrl;
-        imgEl.style.display = "block";
-      }
-      if (placeholderEl) {
-        placeholderEl.style.display = "none";
-      }
-      if (frameEl) {
-        frameEl.classList.add("has-photo");
-      }
-    }
-
-    function showFrameError(frameId, msg) {
-      const errorEl = document.getElementById("frameError" + frameId);
-      if (!errorEl) return;
-      errorEl.textContent = msg;
-      errorEl.style.display = "block";
-      setTimeout(() => {
-        errorEl.style.display = "none";
-      }, 3500);
-    }
-
-    async function initGalleryPhotos() {
+    function initGalleryPhotos() {
       for (let i = 1; i <= 6; i++) {
-        const saved = await getGalleryPhoto(i);
-        if (saved) {
-          displayPhotoInFrame(i, saved);
+        const img = document.getElementById("galleryImg" + i);
+        const placeholder = document.getElementById("placeholder" + i);
+        const frame = document.getElementById("photoFrame" + i);
+        if (!img) continue;
+
+        const targetSrc = `image/photo${i}.jpg`;
+        if (img.getAttribute("src") !== targetSrc) {
+          img.src = targetSrc;
+        }
+
+        if (img.complete && img.naturalWidth > 0) {
+          img.style.display = "block";
+          if (placeholder) placeholder.style.display = "none";
+          if (frame) frame.classList.add("has-photo");
         } else {
-          // Check if local file exists on disk in image/ folder
-          const testImg = new Image();
-          testImg.onload = () => {
-            displayPhotoInFrame(i, `image/photo${i}.jpg`);
+          img.onload = () => {
+            img.style.display = "block";
+            if (placeholder) placeholder.style.display = "none";
+            if (frame) frame.classList.add("has-photo");
           };
-          testImg.onerror = () => {
-            // Check fallback for double extension (.jpg.jpeg)
-            const testImg2 = new Image();
-            testImg2.onload = () => {
-              displayPhotoInFrame(i, `image/photo${i}.jpg.jpeg`);
+          img.onerror = () => {
+            // Check fallback for .jpg.jpeg if Windows extension hiding caused it
+            const fallback = new Image();
+            fallback.onload = () => {
+              img.src = `image/photo${i}.jpg.jpeg`;
+              img.style.display = "block";
+              if (placeholder) placeholder.style.display = "none";
+              if (frame) frame.classList.add("has-photo");
             };
-            testImg2.onerror = () => {
-              // Keep empty placeholder visible; caption remains intact
+            fallback.onerror = () => {
+              img.style.display = "none";
+              if (placeholder) placeholder.style.display = "flex";
+              if (frame) frame.classList.remove("has-photo");
             };
-            testImg2.src = `image/photo${i}.jpg.jpeg`;
+            fallback.src = `image/photo${i}.jpg.jpeg`;
           };
-          testImg.src = `image/photo${i}.jpg`;
         }
       }
     }
 
-    // Call on load
     if (document.readyState === "loading") {
       document.addEventListener("DOMContentLoaded", initGalleryPhotos);
     } else {
